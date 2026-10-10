@@ -25,8 +25,8 @@ const CONFIG = {
   frase: "",
 
   // --- FORMULARIO ---
-  textoForm: "Tu presencia es lo más importante",
-  textoFormSub: "Recordá completar un formulario por persona. <br> Hacelo antes del 26 de diciembre. <br> Consultas: mamá Luisina, 099 414 380",
+  textoForm: "Tu presencia es lo más importante confirma tu asistencia",
+  textoFormSub: "",
   maxInvitados: 5,
   scriptFormUrl: "https://script.google.com/macros/s/AKfycbwDIKOmoMHUd84z9owKanuoAznaHfYJ_ZNgGgrkyGO_ET3lgGvoR1dDL7x6xX51ZRdLOg/exec",
 

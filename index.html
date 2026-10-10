@@ -55,7 +55,7 @@
             <div data-aos="fade-up" class="etiqueta">segundos</div>
         </div>
     </div>
-
+ 
     <div class="datos-ubicacion">
         <div>
             <img data-aos="fade-down" src="./img-editable/icono1.png" alt="">
@@ -90,29 +90,18 @@
         </div>
     </div>
 
-<!--
-        <div class="forms">
+    <div class="forms">
         <form name="asistenciaform" method="POST" action="#" class="formulario">
             <img data-aos="fade-down" src="./img-editable/icono1.png" alt="">
             <label data-aos="fade-up" class="formtitle" id="form-title"></label>
             <p data-aos="fade-up" id="form-sub"></p>
 
-            <select name="ASISTENCIA" required>
-                <option value="" disabled selected>¿Venís?</option>
-                <option value="Si">Sí, voy</option>
-                <option value="No">No puedo ir</option>
-                <option value="No lo decido">Todavía no lo sé</option>
-            </select>
-            <select name="INVITADOS" id="select-invitados" required>
-                <option value="" disabled selected>¿Cuántos lugares necesitás?</option>
-            </select>
             <input type="text" name="NOMBRE" placeholder="Nombre" required />
             <input type="text" name="APELLIDO" placeholder="Apellido" required />
             <textarea name="MENSAJE" id="textarea-mensaje" placeholder="Dejale un mensaje"></textarea>
             <button type="submit" class="boton">ENVIAR</button>
         </form>
     </div>
--->
     <div class="fotos">
         <img src="./img-editable/fotos2.png" alt="">
         <div class="icono2">
@@ -123,10 +112,7 @@
         </div>
     </div>
 
-    <div class="frase" id="bloque-frase">
-        <p data-aos="fade-up" id="texto-frase"></p>
-    </div>
-
+  
     <div class="end">
         <img data-aos="fade-down" src="./img-editable/icono1.png" alt="">
         <h2 data-aos="fade-up" id="nombre-end"></h2>
@@ -160,7 +146,6 @@
 
         document.addEventListener("DOMContentLoaded", function () {
 
-    
             // Título de pestaña
             document.title = CONFIG.tituloTab;
 
@@ -187,6 +172,20 @@
                 document.getElementById("bloque-frase").style.display = "none";
             }
 
+            // Frase 2 (se oculta si no hay texto; el botón se oculta si no hay link)
+            if (CONFIG.frase2) {
+                document.getElementById("texto-frase2").innerHTML = CONFIG.frase2;
+                const btnFrase2 = document.getElementById("btn-frase2");
+                if (CONFIG.linkBotonFrase2) {
+                    btnFrase2.href = CONFIG.linkBotonFrase2;
+                    btnFrase2.textContent = CONFIG.textoBotonFrase2;
+                } else {
+                    btnFrase2.style.display = "none";
+                }
+            } else {
+                document.getElementById("bloque-frase2").style.display = "none";
+            }
+
             // Links
             document.getElementById("btn-mapa").href = CONFIG.linkMapa;
             const btnAgendar = document.getElementById("btn-agendar");
@@ -194,15 +193,6 @@
                 btnAgendar.href = CONFIG.linkAgendar;
             } else {
                 btnAgendar.style.display = "none";
-            }
-
-            // Opciones del select de invitados
-            const select = document.getElementById("select-invitados");
-            for (let i = 1; i <= CONFIG.maxInvitados; i++) {
-                const opt = document.createElement("option");
-                opt.value = i;
-                opt.textContent = i + (i === 1 ? " persona" : " personas");
-                select.appendChild(opt);
             }
 
             // Action del form
