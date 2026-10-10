@@ -25,8 +25,8 @@ const CONFIG = {
   frase: "",
 
   // --- FORMULARIO ---
-  textoForm: "Tu presencia es lo más importante confirma tu asistencia",
-  textoFormSub: "",
+  textoForm: "Tu presencia es lo más importante",
+  textoFormSub: "Confirma tu asistencia",
   maxInvitados: 5,
   scriptFormUrl: "https://script.google.com/macros/s/AKfycbwDIKOmoMHUd84z9owKanuoAznaHfYJ_ZNgGgrkyGO_ET3lgGvoR1dDL7x6xX51ZRdLOg/exec",
 
