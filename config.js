@@ -28,7 +28,7 @@ const CONFIG = {
   textoForm: "Tu presencia es lo más importante",
   textoFormSub: "Recordá completar un formulario por persona. <br> Hacelo antes del 26 de diciembre. <br> Consultas: mamá Luisina, 099 414 380",
   maxInvitados: 5,
-  scriptFormUrl: "https://script.google.com/macros/s/AKfycbyhFfvrpBn9OESN_aYp4WB126P5vRIsf-xeOl9iy5ZKQ1gqtRsmr4u7ygAuxxJLxn9_XQ/exec",
+  scriptFormUrl: "https://script.google.com/macros/s/AKfycbwDIKOmoMHUd84z9owKanuoAznaHfYJ_ZNgGgrkyGO_ET3lgGvoR1dDL7x6xX51ZRdLOg/exec",
 
   // --- AUDIO ---
   archivoAudio: "./violinfelizc.mp3",
