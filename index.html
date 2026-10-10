@@ -92,21 +92,22 @@
 
     <div class="forms">
         <form name="asistenciaform" method="POST" action="#" class="formulario">
-            <img data-aos="fade-down" src="./img-editable/icono4.png" alt="">
+            <img data-aos="fade-down" src="./img-editable/icono1.png" alt="">
             <label data-aos="fade-up" class="formtitle" id="form-title"></label>
             <p data-aos="fade-up" id="form-sub"></p>
 
-            <input type="text" name="Asistencia" placeholder="Si / No / No lo decido" required />
+            <select name="ASISTENCIA" required>
+                <option value="" disabled selected>¿Venís?</option>
+                <option value="Si">Sí, voy</option>
+                <option value="No">No puedo ir</option>
+                <option value="No lo decido">Todavía no lo sé</option>
+            </select>
             <select name="INVITADOS" id="select-invitados" required>
                 <option value="" disabled selected>¿Cuántos lugares necesitás?</option>
             </select>
             <input type="text" name="NOMBRE" placeholder="Nombre" required />
             <input type="text" name="APELLIDO" placeholder="Apellido" required />
-           <textarea 
-    name="MENSAJE" 
-    id="textarea-mensaje" 
-    placeholder="Dejale un mensaje">
-</textarea>
+            <textarea name="MENSAJE" id="textarea-mensaje" placeholder="Dejale un mensaje"></textarea>
             <button type="submit" class="boton">ENVIAR</button>
         </form>
     </div>
